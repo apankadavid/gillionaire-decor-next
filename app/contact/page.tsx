@@ -1,7 +1,40 @@
+"use client";
+
+import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [service, setService] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setStatus("sending");
+
+    try {
+      const response = await fetch("http://localhost:3000/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, phone, message: `[${service}] ${message}` }),
+      });
+
+      if (!response.ok) throw new Error("Request failed");
+
+      setStatus("success");
+      setName("");
+      setPhone("");
+      setService("");
+      setMessage("");
+    } catch (error) {
+      console.log("Error submitting form:", error);
+      setStatus("error");
+    }
+  }
+
   return (
     <div className="bg-[#faf8f5] text-[#1a2b4c] min-h-screen">
       <Header />
@@ -20,14 +53,15 @@ export default function Contact() {
           <p>Location: Conca, Accra, Ghana</p>
         </div>
 
-        <form action="#" method="POST" className="flex flex-col gap-5 bg-white p-6 rounded-lg shadow">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-5 bg-white p-6 rounded-lg shadow">
           <div>
             <label htmlFor="name" className="block font-medium mb-1">Name</label>
             <input
               type="text"
               id="name"
-              name="name"
               required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="w-full border border-gray-300 rounded-md p-3"
             />
           </div>
@@ -37,8 +71,9 @@ export default function Contact() {
             <input
               type="tel"
               id="phone"
-              name="phone"
               required
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
               className="w-full border border-gray-300 rounded-md p-3"
             />
           </div>
@@ -47,19 +82,20 @@ export default function Contact() {
             <label htmlFor="service" className="block font-medium mb-1">Service Required</label>
             <select
               id="service"
-              name="service"
               required
+              value={service}
+              onChange={(e) => setService(e.target.value)}
               className="w-full border border-gray-300 rounded-md p-3"
             >
               <option value="">Select a service</option>
-              <option value="curtains">Curtains</option>
-              <option value="venetian-blinds">Venetian Blinds</option>
-              <option value="zebra-blinds">Zebra Blinds</option>
-              <option value="vertical-blinds">Vertical Blinds</option>
-              <option value="roller-blinds">Roller Blinds</option>
-              <option value="curtain-repairs">Curtain Repairs</option>
-              <option value="curtain-washing">Curtain Washing</option>
-              <option value="other">Other</option>
+              <option value="Curtains">Curtains</option>
+              <option value="Venetian Blinds">Venetian Blinds</option>
+              <option value="Zebra Blinds">Zebra Blinds</option>
+              <option value="Vertical Blinds">Vertical Blinds</option>
+              <option value="Roller Blinds">Roller Blinds</option>
+              <option value="Curtain Repairs">Curtain Repairs</option>
+              <option value="Curtain Washing">Curtain Washing</option>
+              <option value="Other">Other</option>
             </select>
           </div>
 
@@ -67,19 +103,28 @@ export default function Contact() {
             <label htmlFor="message" className="block font-medium mb-1">Tell Us About Your Project</label>
             <textarea
               id="message"
-              name="message"
               required
               rows={4}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               className="w-full border border-gray-300 rounded-md p-3"
             />
           </div>
 
           <button
             type="submit"
-            className="bg-[#8a6d1a] text-white px-8 py-3 rounded-md font-semibold self-start"
+            disabled={status === "sending"}
+            className="bg-[#8a6d1a] text-white px-8 py-3 rounded-md font-semibold self-start disabled:opacity-50"
           >
-            Send Enquiry
+            {status === "sending" ? "Sending..." : "Send Enquiry"}
           </button>
+
+          {status === "success" && (
+            <p className="text-green-700 font-medium">Thank you! Your enquiry has been received.</p>
+          )}
+          {status === "error" && (
+            <p className="text-red-700 font-medium">Something went wrong. Please try again or contact us on WhatsApp.</p>
+          )}
         </form>
 
         <div className="text-center mt-8">

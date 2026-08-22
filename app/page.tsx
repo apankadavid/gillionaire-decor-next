@@ -3,13 +3,13 @@ import Footer from "./components/Footer";
 import ServiceCard from "./components/ServiceCard";
 
 const allServices = [
-  { name: "Custom Curtains", price: 800, duration: "5-7 days" },
-  { name: "Venetian Blinds", price: 500, duration: "3-5 days" },
-  { name: "Zebra Blinds", price: 500, duration: "3-5 days" },
-  { name: "Vertical Blinds", price: 550, duration: "3-5 days" },
-  { name: "Roller Blinds", price: 500, duration: "3-5 days" },
-  { name: "Curtain Repairs", price: 200, duration: "2-4 days" },
-  { name: "Curtain Washing", price: 150, duration: "1-2 days" },
+  { name: "Custom Curtains", description: "Custom curtain solutions, fitting, styling, and installation." },
+  { name: "Venetian Blinds", description: "Clean, timeless option with adjustable light and privacy control." },
+  { name: "Zebra Blinds", description: "Contemporary layered design for flexible light control." },
+  { name: "Vertical Blinds", description: "A practical solution for larger windows and offices." },
+  { name: "Roller Blinds", description: "Simple, sleek, and versatile for modern spaces." },
+  { name: "Curtain Repairs", description: "Restoring damaged or worn curtains instead of replacing them." },
+  { name: "Curtain Washing", description: "Professional washing and refreshing for your curtains." },
 ];
 
 export default function Home() {
@@ -60,14 +60,13 @@ export default function Home() {
       <section className="max-w-4xl mx-auto py-16 px-5">
         <h2 className="text-3xl font-serif mb-8 text-center">Our Services</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {allServices.map((service) => (
-            <ServiceCard
-              key={service.name}
-              name={service.name}
-              price={service.price}
-              duration={service.duration}
-            />
-          ))}
+            {allServices.map((service) => (
+              <ServiceCard
+                key={service.name}
+                name={service.name}
+                description={service.description}
+              />
+            ))}
         </div>
         <div className="text-center mt-10">
           <a

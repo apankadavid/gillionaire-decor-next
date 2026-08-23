@@ -18,7 +18,7 @@ export default function Home() {
       <Header />
 
       <section
-        className="relative py-24 px-5 text-center text-white"
+        className="relative py-16 sm:py-20 md:py-24 px-5 text-center text-white bg-[#1a2b4c] bg-no-repeat bg-center bg-contain sm:bg-cover"
         style={{
           backgroundImage: "linear-gradient(rgba(26,43,76,0.75), rgba(26,43,76,0.85)), url('/hero.jpg')",
           backgroundSize: "cover",

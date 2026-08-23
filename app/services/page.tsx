@@ -48,7 +48,7 @@ export default function Services() {
 
       {/* Intro */}
       <section className="max-w-3xl mx-auto py-16 px-5 text-center">
-        <h2 className="text-3xl font-serif mb-4">Complete Window Solutions, From Design to Installation</h2>
+        <h2 className="text-3xl font-playfair mb-4">Complete Window Solutions, From Design to Installation</h2>
         <p>
           At Gillionaire Decor, we provide more than curtains. From choosing
           the right window treatment to professional installation, repairs,
@@ -62,7 +62,7 @@ export default function Services() {
           {services.map((service) => (
             <div key={service.title} className="bg-white p-6 rounded-lg shadow">
               <div className="text-3xl mb-3">{service.icon}</div>
-              <h3 className="text-xl font-serif mb-2">{service.title}</h3>
+              <h3 className="text-xl font-playfair mb-2">{service.title}</h3>
               <p className="text-sm">{service.description}</p>
             </div>
           ))}
@@ -71,7 +71,7 @@ export default function Services() {
 
       {/* Blinds breakdown */}
       <section className="max-w-4xl mx-auto py-16 px-5">
-        <h2 className="text-2xl font-serif mb-8 text-center">Our Blind Types</h2>
+        <h2 className="text-2xl font-playfair mb-8 text-center">Our Blind Types</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {blindTypes.map((blind) => (
             <div key={blind.name} className="bg-white p-5 rounded-lg shadow">
@@ -84,7 +84,7 @@ export default function Services() {
 
       {/* Commercial & Office — dedicated section */}
       <section className="max-w-3xl mx-auto py-16 px-5 text-center bg-[#1a2b4c] text-white rounded-lg mb-16">
-        <h2 className="text-2xl font-serif mb-4">Commercial & Office Solutions</h2>
+        <h2 className="text-2xl font-playfair mb-4">Commercial & Office Solutions</h2>
         <p className="mb-4">
           Your workspace represents your business. We provide curtain and
           blind solutions suitable for offices, shops, hospitality spaces,
@@ -101,7 +101,7 @@ export default function Services() {
 
       {/* Final CTA */}
       <section className="max-w-3xl mx-auto py-16 px-5 text-center">
-        <h2 className="text-2xl font-serif mb-4">Your Windows Are Part of Your Interior</h2>
+        <h2 className="text-2xl font-playfair mb-4">Your Windows Are Part of Your Interior</h2>
         <p className="mb-6">
           Whether you need new curtains, modern blinds, installation,
           repairs, washing, or expert guidance — Gillionaire Decor can help.

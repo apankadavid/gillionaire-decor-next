@@ -40,7 +40,7 @@ export default function Contact() {
       <Header />
 
       <section className="max-w-2xl mx-auto py-16 px-5">
-        <h2 className="text-3xl font-serif mb-4 text-center">Let&apos;s Talk About Your Space</h2>
+        <h2 className="text-3xl font-playfair mb-4 text-center">Let&apos;s Talk About Your Space</h2>
         <p className="mb-8 text-center">
           Have a window that needs a new look? Need new curtains, blinds,
           repairs or curtain washing? We&apos;d love to hear from you.

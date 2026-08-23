@@ -7,7 +7,7 @@ export default function About() {
       <Header />
 
       <section className="max-w-3xl mx-auto py-16 px-5">
-        <h2 className="text-3xl font-serif mb-4 text-center">
+        <h2 className="text-3xl font-playfair mb-4 text-center">
           We Don&apos;t Just Cover Windows. We Complete Spaces.
         </h2>
         <p className="mb-4">
@@ -26,7 +26,7 @@ export default function About() {
       </section>
 
       <section className="max-w-3xl mx-auto py-12 px-5">
-        <h3 className="text-2xl font-serif mb-4">What We Do</h3>
+        <h3 className="text-2xl font-playfair mb-4">What We Do</h3>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 list-disc list-inside">
           <li>Custom curtains</li>
           <li>Venetian blinds</li>
@@ -39,7 +39,7 @@ export default function About() {
       </section>
 
       <section className="max-w-3xl mx-auto py-12 px-5">
-        <h3 className="text-2xl font-serif mb-4">Our Approach</h3>
+        <h3 className="text-2xl font-playfair mb-4">Our Approach</h3>
         <p className="mb-4">
           We believe good décor begins with understanding. Before choosing a
           curtain or blind, it is important to consider the space, the
@@ -71,7 +71,7 @@ export default function About() {
       </section>
 
       <section className="max-w-3xl mx-auto py-16 px-5 text-center">
-        <h3 className="text-2xl font-serif mb-4">More Than Décor</h3>
+        <h3 className="text-2xl font-playfair mb-4">More Than Décor</h3>
         <p>
           We understand that décor is not simply about making a room look
           attractive. It is about creating an environment where people feel

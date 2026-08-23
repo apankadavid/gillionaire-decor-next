@@ -38,7 +38,7 @@ export default function FAQ() {
       <Header />
 
       <section className="max-w-2xl mx-auto py-16 px-5">
-        <h2 className="text-3xl font-serif mb-10 text-center">
+        <h2 className="text-3xl font-playfair mb-10 text-center">
           Frequently Asked Questions
         </h2>
 

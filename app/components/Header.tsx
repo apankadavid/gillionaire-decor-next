@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const NAV = [
@@ -18,8 +19,9 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 bg-[#1a2b4c] text-white">
       <div className="mx-auto flex h-20 max-w-5xl items-center justify-between px-5">
-        <Link href="/" className="text-xl font-bold">
-          Gillionaire Decor
+        <Link href="/" className="flex items-center gap-3">
+          <Image src="/logo.jpg" alt="Gillionaire Decor" width={44} height={44} className="rounded-md" />
+          <span className="text-xl font-bold hidden sm:inline">Gillionaire Decor</span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-6" aria-label="Primary">

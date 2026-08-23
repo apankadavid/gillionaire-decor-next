@@ -17,31 +17,40 @@ export default function Home() {
     <div className="bg-[#faf8f5] text-[#1a2b4c]">
       <Header />
 
-      <section className="max-w-3xl mx-auto py-20 px-5 text-center">
-        <h2 className="text-4xl font-serif text-[#8a6d1a] mb-4">
-          Transform Your Space. Dress Your Windows Beautifully.
-        </h2>
-        <p className="mb-4">
-          At Gillionaire Decor, we create stylish, functional and carefully
-          finished window treatments that bring comfort, privacy and
-          character to your space.
-        </p>
-        <p className="mb-6 font-medium">
-          Custom Curtains | Blinds | Repairs | Curtain Cleaning
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="/contact"
-            className="inline-block bg-[#8a6d1a] text-white px-8 py-3 rounded-md font-semibold"
-          >
-            Book a Service
-          </a>
-          <a
-            href="/services"
-            className="inline-block border border-[#1a2b4c] text-[#1a2b4c] px-8 py-3 rounded-md font-semibold"
-          >
-            Explore Our Services
-          </a>
+      <section
+        className="relative py-24 px-5 text-center text-white"
+        style={{
+          backgroundImage: "linear-gradient(rgba(26,43,76,0.75), rgba(26,43,76,0.85)), url('/hero.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl font-serif text-[#c9a227] mb-4">
+            Transform Your Space. Dress Your Windows Beautifully.
+          </h2>
+          <p className="mb-4">
+            At Gillionaire Decor, we create stylish, functional and carefully
+            finished window treatments that bring comfort, privacy and
+            character to your space.
+          </p>
+          <p className="mb-6 font-medium">
+            Custom Curtains | Blinds | Repairs | Curtain Cleaning
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="inline-block bg-[#8a6d1a] text-white px-8 py-3 rounded-md font-semibold"
+            >
+              Book a Service
+            </a>
+            <a
+              href="/services"
+              className="inline-block border border-white text-white px-8 py-3 rounded-md font-semibold"
+            >
+              Explore Our Services
+            </a>
+          </div>
         </div>
       </section>
 

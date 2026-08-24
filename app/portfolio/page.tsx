@@ -48,6 +48,25 @@ export default function Portfolio() {
         </section>
       </FadeIn>
       <FadeIn>
+        <section className="max-w-4xl mx-auto py-16 px-5">
+            <h2 className="text-2xl font-playfair mb-8 text-center">See It In Motion</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="bg-white rounded-lg shadow overflow-hidden transition-transform hover:-translate-y-1">
+                <video controls preload="metadata" className="w-full h-64 object-cover">
+                <source src="/curtain-hugging.mp4" type="video/mp4" />
+                </video>
+                <p className="p-4 font-manrope font-semibold text-sm">Curtain Detail & Finishing</p>
+            </div>
+            <div className="bg-white rounded-lg shadow overflow-hidden transition-transform hover:-translate-y-1">
+                <video controls preload="metadata" className="w-full h-64 object-cover">
+                <source src="/full-curtain.mp4" type="video/mp4" />
+                </video>
+                <p className="p-4 font-manrope font-semibold text-sm">Full Installation Reveal</p>
+            </div>
+            </div>
+        </section>
+        </FadeIn>
+      <FadeIn>
         <section className="mx-auto max-w-3xl px-5 py-16 text-center sm:py-20">
           <h2 className="mb-5 font-playfair text-3xl leading-tight sm:text-4xl">Start Your Own Project</h2>
           <p className="mb-7 text-lg leading-7">

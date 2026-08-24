@@ -21,6 +21,7 @@ export default function Footer() {
           <ul className="mt-4 space-y-2 text-sm text-white/80">
             <li><a href="/about" className="hover:text-[#c9a227]">About</a></li>
             <li><a href="/services" className="hover:text-[#c9a227]">Services</a></li>
+            <li><a href="/portfolio" className="hover:text-[#c9a227]">Portfolio</a></li>
             <li><a href="/faq" className="hover:text-[#c9a227]">FAQ</a></li>
             <li><a href="/contact" className="hover:text-[#c9a227]">Contact</a></li>
           </ul>
@@ -52,7 +53,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-5xl px-5 py-5 text-xs text-white/60 text-center">
+        <div className="mx-auto max-w-5xl px-5 py-5 text-center text-xs text-white/60">
           &copy; {new Date().getFullYear()} Gillionaire Decor. All rights reserved.
         </div>
       </div>

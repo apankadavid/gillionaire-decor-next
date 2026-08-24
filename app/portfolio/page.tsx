@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Image from "next/image";
+import FadeIn from "../components/FadeIn";
 
 const gallery = [
   { src: "/service-curtains.jpeg", alt: "Custom curtains installed in a living room", caption: "Custom Curtains" },
@@ -13,43 +14,53 @@ const gallery = [
 
 export default function Portfolio() {
   return (
-    <div className="bg-[#faf8f5] text-[#1a2b4c] min-h-screen">
+    <div className="min-h-screen overflow-x-hidden bg-[#faf8f5] text-[#1a2b4c]">
       <Header />
 
-      <section className="max-w-3xl mx-auto py-16 px-5 text-center">
-        <h2 className="text-3xl font-playfair mb-4">See the Difference</h2>
-        <p>
+      <section className="mx-auto max-w-3xl px-5 py-16 text-center sm:py-20">
+        <h1 className="mb-5 font-playfair text-3xl leading-tight sm:text-4xl">See the Difference</h1>
+        <p className="leading-7">
           Explore some of our recent curtain, blind, and window-treatment
           projects — from residential living rooms to commercial spaces
           across Accra.
         </p>
       </section>
-
-      <section className="max-w-5xl mx-auto py-8 px-5">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <FadeIn>
+        <section className="mx-auto max-w-5xl px-5 pb-16 sm:pb-20">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {gallery.map((item) => (
-            <div key={item.src} className="bg-white rounded-lg shadow overflow-hidden">
-              <div className="relative w-full h-56">
-                <Image src={item.src} alt={item.alt} fill className="object-cover" />
+            <FadeIn key={item.src}>
+              <div className="overflow-hidden rounded-lg bg-white shadow-sm">
+                <div className="relative h-56 w-full">
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    sizes="(min-width: 1024px) 320px, (min-width: 640px) calc((100vw - 64px) / 2), calc(100vw - 40px)"
+                    className="object-cover"
+                  />
+                </div>
+                <p className="p-4 font-manrope font-semibold text-sm">{item.caption}</p>
               </div>
-              <p className="p-4 font-manrope font-semibold text-sm">{item.caption}</p>
-            </div>
+            </FadeIn>
           ))}
-        </div>
-      </section>
-
-      <section className="max-w-3xl mx-auto py-16 px-5 text-center">
-        <h2 className="text-2xl font-playfair mb-4">Start Your Own Project</h2>
-        <p className="mb-6">
-          Every space is different. Let&apos;s talk about how we can transform yours.
-        </p>
-        <a
-          href="/contact"
-          className="inline-block bg-[#8a6d1a] text-white px-8 py-3 rounded-md font-semibold"
-        >
-          Contact Gillionaire Decor
-        </a>
-      </section>
+          </div>
+        </section>
+      </FadeIn>
+      <FadeIn>
+        <section className="mx-auto max-w-3xl px-5 py-16 text-center sm:py-20">
+          <h2 className="mb-5 font-playfair text-3xl leading-tight sm:text-4xl">Start Your Own Project</h2>
+          <p className="mb-7 text-lg leading-7">
+            Every space is different. Let&apos;s talk about how we can transform yours.
+          </p>
+          <a
+            href="/contact"
+            className="inline-flex min-h-12 items-center justify-center rounded-md bg-[#8a6d1a] px-7 py-3 font-semibold text-white transition-colors hover:bg-[#6f5715]"
+          >
+            Contact Gillionaire Decor
+          </a>
+        </section>
+      </FadeIn>
 
       <Footer />
     </div>

@@ -1,6 +1,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
+import FadeIn from "../components/FadeIn";
 const faqs = [
   {
     question: "What services does Gillionaire Decor provide?",
@@ -34,20 +34,22 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <div className="bg-[#faf8f5] text-[#1a2b4c] min-h-screen">
+    <div className="min-h-screen overflow-x-hidden bg-[#faf8f5] text-[#1a2b4c]">
       <Header />
 
-      <section className="max-w-2xl mx-auto py-16 px-5">
-        <h2 className="text-3xl font-playfair mb-10 text-center">
+      <section className="mx-auto max-w-2xl px-5 py-16 sm:py-20">
+        <h1 className="mb-9 text-center font-playfair text-3xl leading-tight sm:text-4xl">
           Frequently Asked Questions
-        </h2>
+        </h1>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-5">
           {faqs.map((faq) => (
-            <div key={faq.question} className="bg-white p-5 rounded-lg shadow">
-              <h3 className="font-semibold mb-2">{faq.question}</h3>
-              <p className="text-sm">{faq.answer}</p>
-            </div>
+            <FadeIn key={faq.question}>
+              <div className="rounded-lg bg-white p-6 shadow-sm">
+                <h3 className="font-semibold mb-2">{faq.question}</h3>
+                <p className="text-sm">{faq.answer}</p>
+              </div>
+            </FadeIn>
           ))}
         </div>
       </section>

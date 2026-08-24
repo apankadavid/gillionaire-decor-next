@@ -1,33 +1,34 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FadeIn from "../components/FadeIn";
 
 export default function About() {
   return (
-    <div className="bg-[#faf8f5] text-[#1a2b4c] min-h-screen">
+    <div className="min-h-screen overflow-x-hidden bg-[#faf8f5] text-[#1a2b4c]">
       <Header />
 
-      <section className="max-w-3xl mx-auto py-16 px-5">
-        <h2 className="text-3xl font-playfair mb-4 text-center">
+      <section className="mx-auto max-w-3xl px-5 py-16 sm:py-20">
+        <h1 className="mb-5 text-center font-playfair text-3xl leading-tight sm:text-4xl">
           We Don&apos;t Just Cover Windows. We Complete Spaces.
-        </h2>
-        <p className="mb-4">
+        </h1>
+        <p className="mb-4 leading-7">
           At Gillionaire Decor, we believe the right window treatment can
           transform an ordinary room into a space that feels complete.
         </p>
-        <p className="mb-4">
+        <p className="mb-4 leading-7">
           Our work focuses on providing practical and stylish solutions for
           windows, from custom curtains and modern blinds to curtain repairs
           and professional washing.
         </p>
-        <p>
+        <p className="leading-7">
           Our goal is to help you find the right balance between style,
           comfort, functionality and quality finishing.
         </p>
       </section>
-
-      <section className="max-w-3xl mx-auto py-12 px-5">
-        <h3 className="text-2xl font-playfair mb-4">What We Do</h3>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 list-disc list-inside">
+      <FadeIn>
+      <section className="mx-auto max-w-3xl px-5 py-12 sm:py-16">
+        <h2 className="mb-5 font-playfair text-2xl leading-tight sm:text-3xl">What We Do</h2>
+        <ul className="grid list-inside list-disc grid-cols-1 gap-3 sm:grid-cols-2">
           <li>Custom curtains</li>
           <li>Venetian blinds</li>
           <li>Zebra blinds</li>
@@ -37,10 +38,11 @@ export default function About() {
           <li>Curtain washing</li>
         </ul>
       </section>
-
-      <section className="max-w-3xl mx-auto py-12 px-5">
-        <h3 className="text-2xl font-playfair mb-4">Our Approach</h3>
-        <p className="mb-4">
+      </FadeIn>
+      <FadeIn>
+      <section className="mx-auto max-w-3xl px-5 py-12 sm:py-16">
+        <h2 className="mb-5 font-playfair text-2xl leading-tight sm:text-3xl">Our Approach</h2>
+        <p className="mb-4 leading-7">
           We believe good décor begins with understanding. Before choosing a
           curtain or blind, it is important to consider the space, the
           amount of natural light, privacy requirements, interior style and
@@ -50,9 +52,10 @@ export default function About() {
           We listen. We advise. We create. We care for the details.
         </p>
       </section>
-
-      <section className="max-w-3xl mx-auto py-12 px-5 grid grid-cols-1 sm:grid-cols-2 gap-8">
-        <div className="bg-white p-6 rounded-lg shadow">
+      </FadeIn>
+      <FadeIn>
+      <section className="mx-auto grid max-w-3xl grid-cols-1 gap-5 px-5 py-12 sm:grid-cols-2 sm:gap-6 sm:py-16">
+        <div className="rounded-lg bg-white p-6 shadow-sm">
           <h3 className="font-semibold mb-2">Our Vision</h3>
           <p className="text-sm">
             To become a trusted name in modern window décor and curtain-care
@@ -60,7 +63,7 @@ export default function About() {
             and customer satisfaction.
           </p>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow">
+        <div className="rounded-lg bg-white p-6 shadow-sm">
           <h3 className="font-semibold mb-2">Our Mission</h3>
           <p className="text-sm">
             To help individuals, families and businesses create more
@@ -69,16 +72,18 @@ export default function About() {
           </p>
         </div>
       </section>
-
-      <section className="max-w-3xl mx-auto py-16 px-5 text-center">
-        <h3 className="text-2xl font-playfair mb-4">More Than Décor</h3>
-        <p>
+      </FadeIn>
+      <FadeIn>
+      <section className="mx-auto max-w-3xl px-5 py-16 text-center sm:py-20">
+        <h2 className="mb-5 font-playfair text-3xl leading-tight sm:text-4xl">More Than Décor</h2>
+        <p className="leading-7">
           We understand that décor is not simply about making a room look
           attractive. It is about creating an environment where people feel
           comfortable, welcome and confident. That philosophy guides
           everything we do at Gillionaire Decor.
         </p>
       </section>
+      </FadeIn>
 
       <Footer />
     </div>

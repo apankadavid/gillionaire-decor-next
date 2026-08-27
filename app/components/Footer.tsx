@@ -1,3 +1,5 @@
+import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
+
 export default function Footer() {
   return (
     <footer className="bg-[#1a2b4c] text-white">
@@ -7,11 +9,37 @@ export default function Footer() {
           <p className="mt-3 text-sm text-white/70 max-w-xs">
             Cast a spell over your home. Beautiful windows, better spaces.
           </p>
-          <div className="mt-4 flex gap-4 text-sm text-white/70">
-            <span>Instagram</span>
-            <span>Facebook</span>
-            <span>TikTok</span>
-          </div>
+          <div className="mt-4 flex gap-4">
+            <a
+            href="https://instagram.com/gillionairedecor"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="text-white/70 hover:text-[#c9a227] transition-colors"
+          >
+            <FaInstagram size={20} />
+          </a>
+
+          <a
+            href="https://facebook.com/gillionairedecor"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="text-white/70 hover:text-[#c9a227] transition-colors"
+          >
+            <FaFacebook size={20} />
+          </a>
+
+          <a
+            href="https://tiktok.com/@gillionairedecor"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+            className="text-white/70 hover:text-[#c9a227] transition-colors"
+          >
+            <FaTiktok size={20} />
+          </a>
+        </div>
         </div>
 
         <div>

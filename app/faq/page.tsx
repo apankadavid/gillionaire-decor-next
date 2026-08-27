@@ -38,9 +38,12 @@ export default function FAQ() {
       <Header />
 
       <section className="mx-auto max-w-2xl px-5 py-16 sm:py-20">
-        <h1 className="mb-9 text-center font-playfair text-3xl leading-tight sm:text-4xl">
-          Frequently Asked Questions
-        </h1>
+          <FadeIn>
+            <section className="bg-[#1a2b4c] text-white py-16 px-5 text-center">
+              <h2 className="text-3xl font-playfair mb-2">Frequently Asked Questions</h2>
+              <p className="text-white/80">Everything you need to know before booking a service</p>
+            </section>
+          </FadeIn>
 
         <div className="flex flex-col gap-5">
           {faqs.map((faq) => (

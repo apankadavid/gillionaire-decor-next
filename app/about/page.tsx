@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FadeIn from "../components/FadeIn";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -25,6 +26,13 @@ export default function About() {
           comfort, functionality and quality finishing.
         </p>
       </section>
+      <FadeIn>
+        <section className="max-w-4xl mx-auto px-5">
+          <div className="relative w-full h-72 sm:h-96 rounded-lg overflow-hidden shadow">
+            <Image src="/installation.jpeg" alt="Gillionaire Decor at work" fill className="object-cover" />
+          </div>
+        </section>
+      </FadeIn>
       <FadeIn>
       <section className="mx-auto max-w-3xl px-5 py-12 sm:py-16">
         <h2 className="mb-5 font-playfair text-2xl leading-tight sm:text-3xl">What We Do</h2>

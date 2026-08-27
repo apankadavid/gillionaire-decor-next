@@ -15,7 +15,7 @@ const allServices = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#faf8f5] text-[#1a2b4c]">
+    <div className="min-h-screengit bg-[#faf8f5] text-[#1a2b4c]">
       <Header />
 
       <section

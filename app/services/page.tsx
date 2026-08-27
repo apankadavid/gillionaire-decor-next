@@ -1,35 +1,36 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FadeIn from "../components/FadeIn";
+import Image from "next/image";
 
 const services = [
   {
-    icon: "🪟",
+    image: "/service-curtains.jpeg",
     title: "Curtains",
     description: "Custom curtain solutions, fitting, styling, and installation for homes, offices, hotels, and commercial spaces.",
   },
   {
-    icon: "▦",
+    image: "/service-blinds.jpeg",
     title: "Blinds",
     description: "Venetian, Zebra, Vertical, and Roller blinds — clean, modern light and privacy control for any space.",
   },
   {
-    icon: "🔧",
+    image: "/service-installation.jpeg",
     title: "Installation",
     description: "Professional fitting for curtains, rods, tracks, and all blind types — clean, balanced, properly finished.",
   },
   {
-    icon: "📏",
+    image: "/service-consultation.jpeg",
     title: "Measurement & Consultation",
     description: "Not sure what your space needs? We measure your windows and help you choose the right style and coverage.",
   },
   {
-    icon: "🧵",
+    image: "/service-repairs.jpeg",
     title: "Repairs & Restoration",
     description: "Damaged sections, loose fittings, or worn curtains — we help restore them instead of replacing unnecessarily.",
   },
   {
-    icon: "✨",
+    image: "/service-curtain-care.jpeg",
     title: "Curtain Care",
     description: "Professional curtain washing and refreshing to keep your interior looking clean and well maintained.",
   },
@@ -62,10 +63,14 @@ export default function Services() {
       <section className="mx-auto max-w-5xl px-5 pb-16 sm:pb-20">
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {services.map((service) => (
-            <div key={service.title} className="bg-white p-6 rounded-lg shadow transition-transform hover:-translate-y-1">
-              <div className="text-3xl mb-3">{service.icon}</div>
-              <h3 className="text-xl font-playfair mb-2">{service.title}</h3>
-              <p className="text-sm">{service.description}</p>
+            <div key={service.title} className="bg-white rounded-lg shadow overflow-hidden transition-transform hover:-translate-y-1">
+              <div className="relative w-full h-40">
+                <Image src={service.image} alt={service.title} fill className="object-cover" />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-playfair mb-2">{service.title}</h3>
+                <p className="text-sm">{service.description}</p>
+              </div>
             </div>
           ))}
         </div>

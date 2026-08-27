@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Image from "next/image";
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -46,11 +47,16 @@ export default function Contact() {
           repairs or curtain washing? We&apos;d love to hear from you.
         </p>
 
-        <div className="mb-6 rounded-lg bg-white p-6 shadow-sm">
-          <h3 className="font-semibold mb-2">Contact Details</h3>
-          <p>Call/WhatsApp: +233 24 331 9657</p>
-          <p>Call/WhatsApp: +233 20 172 0518</p>
-          <p>Location: Conca, Accra, Ghana</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="relative w-full h-56 rounded-lg overflow-hidden shadow">
+            <Image src="/service-consultation.jpeg" alt="Consultation and measurement service" fill className="object-cover" />
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow">
+            <h3 className="font-semibold mb-2">Contact Details</h3>
+            <p>Call/WhatsApp: +233 24 331 9657</p>
+            <p>Call/WhatsApp: +233 20 172 0518</p>
+            <p>Location: Conca, Accra, Ghana</p>
+          </div>
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-5 rounded-lg bg-white p-6 shadow-sm">

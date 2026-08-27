@@ -81,8 +81,9 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-5xl px-5 py-5 text-center text-xs text-white/60">
-          &copy; {new Date().getFullYear()} Gillionaire Decor. All rights reserved.
+        <div className="mx-auto max-w-5xl px-5 py-5 text-xs text-white/60 text-center flex flex-col sm:flex-row sm:justify-between gap-2">
+          <p>&copy; {new Date().getFullYear()} Gillionaire Decor. All rights reserved.</p>
+          <a href="/login" className="hover:text-white/90">Admin Login</a>
         </div>
       </div>
     </footer>

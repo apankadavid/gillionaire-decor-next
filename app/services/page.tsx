@@ -44,7 +44,7 @@ const blindTypes = [
 
 export default function Services() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#faf8f5] text-[#1a2b4c]">
+    <div className="min-h-screen bg-[#faf8f5] text-[#1a2b4c]">
       <Header />
 
       {/* Intro */}
@@ -62,7 +62,7 @@ export default function Services() {
       <section className="mx-auto max-w-5xl px-5 pb-16 sm:pb-20">
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {services.map((service) => (
-            <div key={service.title} className="bg-white p-6 rounded-lg shadow">
+            <div key={service.title} className="bg-white p-6 rounded-lg shadow transition-transform hover:-translate-y-1">
               <div className="text-3xl mb-3">{service.icon}</div>
               <h3 className="text-xl font-playfair mb-2">{service.title}</h3>
               <p className="text-sm">{service.description}</p>
@@ -78,7 +78,7 @@ export default function Services() {
         <h2 className="mb-9 text-center font-playfair text-3xl leading-tight sm:text-4xl">Our Blind Types</h2>
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6">
           {blindTypes.map((blind) => (
-            <div key={blind.name} className="bg-white p-5 rounded-lg shadow">
+            <div key={blind.name} className="bg-white p-5 rounded-lg shadow transition-transform hover:-translate-y-1">
               <h3 className="font-semibold mb-2">{blind.name}</h3>
               <p className="text-sm">{blind.description}</p>
             </div>

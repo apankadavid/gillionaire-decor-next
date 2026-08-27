@@ -4,7 +4,7 @@ import FadeIn from "../components/FadeIn";
 
 export default function About() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#faf8f5] text-[#1a2b4c]">
+    <div className="min-h-screen bg-[#faf8f5] text-[#1a2b4c]">
       <Header />
 
       <section className="mx-auto max-w-3xl px-5 py-16 sm:py-20">
@@ -55,7 +55,7 @@ export default function About() {
       </FadeIn>
       <FadeIn>
       <section className="mx-auto grid max-w-3xl grid-cols-1 gap-5 px-5 py-12 sm:grid-cols-2 sm:gap-6 sm:py-16">
-        <div className="rounded-lg bg-white p-6 shadow-sm">
+        <div className="bg-white p-5 rounded-lg shadow transition-transform hover:-translate-y-1">
           <h3 className="font-semibold mb-2">Our Vision</h3>
           <p className="text-sm">
             To become a trusted name in modern window décor and curtain-care
@@ -63,7 +63,7 @@ export default function About() {
             and customer satisfaction.
           </p>
         </div>
-        <div className="rounded-lg bg-white p-6 shadow-sm">
+        <div className="bg-white p-5 rounded-lg shadow transition-transform hover:-translate-y-1">
           <h3 className="font-semibold mb-2">Our Mission</h3>
           <p className="text-sm">
             To help individuals, families and businesses create more

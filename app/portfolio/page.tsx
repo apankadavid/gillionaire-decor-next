@@ -14,7 +14,7 @@ const gallery = [
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#faf8f5] text-[#1a2b4c]">
+    <div className="min-h-screen bg-[#faf8f5] text-[#1a2b4c]">
       <Header />
 
       <section className="mx-auto max-w-3xl px-5 py-16 text-center sm:py-20">

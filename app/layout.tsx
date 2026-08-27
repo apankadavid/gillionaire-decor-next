@@ -27,7 +27,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${playfair.variable} ${manrope.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-manrope">
+      <body className="min-h-full flex flex-col font-manrope overflow-x-hidden">
         {children}
         <FloatingActions />
       </body>

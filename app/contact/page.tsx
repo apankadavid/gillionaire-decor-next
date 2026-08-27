@@ -36,7 +36,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#faf8f5] text-[#1a2b4c]">
+    <div className="min-h-screen bg-[#faf8f5] text-[#1a2b4c]">
       <Header />
 
       <section className="mx-auto max-w-2xl px-5 py-16 sm:py-20">

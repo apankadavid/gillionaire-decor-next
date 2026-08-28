@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ServiceCard from "./components/ServiceCard";
 import FadeIn from "./components/FadeIn";
+import StatsBar from "./components/StatsBar";
 
 const allServices = [
   { name: "Custom Curtains", description: "Custom curtain solutions, fitting, styling, and installation." },
@@ -54,6 +55,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <StatsBar />
       <FadeIn>
         <section className="mx-auto max-w-3xl px-5 py-16 text-center sm:py-20">
           <h2 className="mb-5 font-serif text-3xl leading-tight sm:text-4xl">A Space Should Feel Like You</h2>
@@ -88,6 +90,7 @@ export default function Home() {
             </a>
           </div>
         </section>
+      
       </FadeIn>
       <FadeIn>
         <section className="mx-auto max-w-5xl px-5 py-16 sm:py-20">

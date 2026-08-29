@@ -35,6 +35,27 @@ const services = [
     title: "Curtain Care",
     description: "Professional curtain washing and refreshing to keep your interior looking clean and well maintained.",
   },
+  {
+  image: "/service-motorised.mp4",
+  title: "Motorised Curtains",
+  description: "Smart, motorised curtain systems for effortless, modern light and privacy control.",
+  isVideo: true,
+},
+{
+  image: "/service-voile.jpeg",
+  title: "Voile",
+  description: "Light, sheer voile fabrics that soften a room while letting natural light through.",
+},
+{
+  image: "/service-upholstery.jpeg",
+  title: "Upholstery",
+  description: "Quality upholstery solutions to refresh and complement your interior furnishings.",
+},
+{
+  image: "/service-ready-made.jpeg",
+  title: "Ready-Made Curtains",
+  description: "Already-made curtains available for a quicker, budget-friendly window treatment option.",
+},
 ];
 
 const blindTypes = [
@@ -66,7 +87,18 @@ export default function Services() {
           {services.map((service) => (
             <div key={service.title} className="bg-white rounded-lg shadow overflow-hidden transition-transform hover:-translate-y-1">
               <div className="relative w-full h-40">
-                <Image src={service.image} alt={service.title} fill className="object-cover" />
+                {service.isVideo ? (
+                  <video
+                    src={service.image}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <Image src={service.image} alt={service.title} fill className="object-cover" />
+                )}
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-playfair mb-2">{service.title}</h3>
@@ -76,6 +108,24 @@ export default function Services() {
           ))}
         </div>
       </section>
+      </FadeIn>
+      <FadeIn>
+        <section className="max-w-3xl mx-auto py-12 px-5 text-center">
+          <h3 className="text-xl font-playfair mb-4">Finishing Touches</h3>
+          <p className="mb-6 text-sm">
+            Complete your window treatment with the right accessories.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {["Tie Backs", "Hooks", "Trimming"].map((item) => (
+              <span
+                key={item}
+                className="bg-white px-5 py-2 rounded-full shadow text-sm font-medium"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </section>
       </FadeIn>
 
       {/* Blinds breakdown */}

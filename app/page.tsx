@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import ServiceCard from "./components/ServiceCard";
 import FadeIn from "./components/FadeIn";
 import StatsBar from "./components/StatsBar";
+import Testimonials from "./components/Testimonials";
 
 const allServices = [
   { name: "Custom Curtains", description: "Custom curtain solutions, fitting, styling, and installation." },
@@ -91,6 +92,9 @@ export default function Home() {
           </div>
         </section>
       
+      </FadeIn>
+      <FadeIn>
+        <Testimonials/>
       </FadeIn>
       <FadeIn>
         <section className="mx-auto max-w-5xl px-5 py-16 sm:py-20">

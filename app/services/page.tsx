@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import FadeIn from "../components/FadeIn";
 import Image from "next/image";
 
+
 const services = [
   {
     image: "/service-curtains.jpeg",

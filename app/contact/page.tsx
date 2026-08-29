@@ -49,7 +49,13 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
           <div className="relative w-full h-56 rounded-lg overflow-hidden shadow">
-            <Image src="/service-consultation.jpeg" alt="Consultation and measurement service" fill className="object-cover" />
+            <Image
+              src="/service-consultation.jpeg"
+              alt="Consultation and measurement service"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
           </div>
           <div className="bg-white p-6 rounded-lg shadow">
             <h3 className="font-semibold mb-2">Contact Details</h3>
@@ -57,6 +63,18 @@ export default function Contact() {
             <p>Call/WhatsApp: +233 20 172 0518</p>
             <p>Location: Conca, Accra, Ghana</p>
           </div>
+        </div>
+        <div className="mb-8 rounded-lg overflow-hidden shadow">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!4v1787968653872!6m8!1m7!1s1uJoDL_5T3q29O0rB5jWIA!2m2!1d5.59643149426522!2d-0.1946878020447384!3f198.53795805794698!4f3.1718477950385733!5f0.7820865974627469"
+            width="100%"
+            height="300"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            title="Gillionaire Decor location"
+          />
         </div>
 
         <form onSubmit={handleSubmit} className="flex flex-col gap-5 rounded-lg bg-white p-6 shadow-sm">

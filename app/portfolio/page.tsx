@@ -10,6 +10,11 @@ const gallery = [
   { src: "/blind-vertical.jpeg", alt: "Vertical blinds installed", caption: "Vertical Blinds" },
   { src: "/blind-multi.jpeg", alt: "Multiple blind styles in one space", caption: "Blind Combinations" },
   { src: "/commercial-office.jpeg", alt: "Curtains installed in a commercial office space", caption: "Commercial Space" },
+  { src: "/portfolio-bedroom-curtains.jpeg", alt: "Modern luxury bedroom curtains in textured jacquard", caption: "Bedroom Curtains" },
+  { src: "/portfolio-blackout-curtains.jpeg", alt: "Double layer blackout curtains with metallic sheers", caption: "Blackout Curtains" },
+  { src: "/portfolio-luxury-curtains.jpeg", alt: "Luxury curtain styling for a modern home", caption: "Luxury Curtains" },
+  { src: "/portfolio-neat-curtain.jpeg", alt: "Neatly finished curtain installation", caption: "Clean Finish" },
+  { src: "/portfolio-inspiration.jpeg", alt: "Curtain and décor inspiration", caption: "Décor Inspiration" },
 ];
 
 export default function Portfolio() {
